@@ -20,7 +20,7 @@ phases:
   build:
     commands:
       - echo Building the Angular app...
-      - ng build --configuration production
+      - ./node_modules/.bin/ng build --configuration production
   post_build:
     commands:
       - echo Moving appspec.yml and scripts to dist/angularapp1
@@ -31,4 +31,3 @@ artifacts:
     - '**/*'
   discard-paths: no
   base-directory: dist/angularapp1
-
