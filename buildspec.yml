@@ -22,9 +22,10 @@ phases:
       - echo Building the Angular app...
       - ng build --configuration production
  post_build:
-    commands:
-      - mv appspec.yml ./dist/angularapp1
-      - mv scripts ./dist/angularapp1
+  commands:
+    - echo Moving appspec.yml and scripts to dist/angularapp1
+    - mv appspec.yml dist/angularapp1/
+    - mv scripts dist/angularapp1/
 artifacts:
   files:
     - '**/*'
